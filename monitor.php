@@ -617,6 +617,12 @@ function displayData(dataJSON)
 </head>
 <body>
 <div id="page" class="wall">
+    <!-- Github Fork Me -->
+    <a href="https://github.com/582033/monitor"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://dn-yjiang-cdn.qbox.me/forkme.png" alt="Fork me on GitHub" data-canonical-src="http://dn-yjiang-cdn.qbox.me/forkme.png"></a>
+    <!-- Github Fork Me -->
+<p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=582033&repo=monitor&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+</p>
 <table class="table table-condensed  table-bordered">
   <tr><th colspan="6">服务器实时数据</th></tr>
   <tr>
@@ -632,21 +638,21 @@ function displayData(dataJSON)
   <tr>
     <td>CPU使用状况</td>
     <td colspan="5"><?php if('/'==DIRECTORY_SEPARATOR){echo $cpu_show;}else{echo "暂时只支持Linux系统";}?>
-	</td>
+    </td>
   </tr>
   <tr>
     <td>硬盘使用状况</td>
     <td colspan="5">
-		总空间 <?php echo $dt;?>&nbsp;G，
-		已用 <font color='#333333'><span id="useSpace"><?php echo $du;?></span></font>&nbsp;G，
-		空闲 <font color='#333333'><span id="freeSpace"><?php echo $df;?></span></font>&nbsp;G，
-		使用率 <span id="hdPercent"><?php echo $hdPercent;?></span>%
-		<div class="bar"><div id="barhdPercent" class="barli_black" style="width:<?php echo $hdPercent;?>%" >&nbsp;</div> </div>
-	</td>
+        总空间 <?php echo $dt;?>&nbsp;G，
+        已用 <font color='#333333'><span id="useSpace"><?php echo $du;?></span></font>&nbsp;G，
+        空闲 <font color='#333333'><span id="freeSpace"><?php echo $df;?></span></font>&nbsp;G，
+        使用率 <span id="hdPercent"><?php echo $hdPercent;?></span>%
+        <div class="bar"><div id="barhdPercent" class="barli_black" style="width:<?php echo $hdPercent;?>%" >&nbsp;</div> </div>
+    </td>
   </tr>
   <tr>
-		<td>内存使用状况</td>
-		<td colspan="5">
+        <td>内存使用状况</td>
+        <td colspan="5">
           物理内存：共
           <font color='#CC0000'><?php echo $memTotal;?> </font>
            , 已用
@@ -654,7 +660,7 @@ function displayData(dataJSON)
           , 空闲
           <font color='#CC0000'><span id="FreeMemory"><?php echo $mf;?></span></font>
           , 使用率
-		  <span id="memPercent"><?php echo $memPercent;?></span>
+          <span id="memPercent"><?php echo $memPercent;?></span>
             <div class="progress">
               <div id="barmemPercent" class="progress-bar" role="progressbar progress-bar-success" aria-valuenow="<?php echo $memPercent?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $memPercent?>;">
                 <span class="sr-only"><?php echo $memPercent?></span>
@@ -664,10 +670,10 @@ function displayData(dataJSON)
 //判断如果cache为0，不显示
 if($sysInfo['memCached']>0) {
 ?>
-		  Cache化内存为 <span id="CachedMemory"><?php echo $mc;?></span>
-		  , 使用率
+          Cache化内存为 <span id="CachedMemory"><?php echo $mc;?></span>
+          , 使用率
           <span id="memCachedPercent"><?php echo $memCachedPercent;?></span>
-		  %	| Buffers缓冲为  <span id="Buffers"><?php echo $mb;?></span>
+          %	| Buffers缓冲为  <span id="Buffers"><?php echo $mb;?></span>
             <div class="progress">
               <div id="barmemCachedPercent" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?php echo $memCachedPercent?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $memCachedPercent?>;">
                 <span class="sr-only"><?php echo $memCachedPercent?></span>
@@ -676,9 +682,9 @@ if($sysInfo['memCached']>0) {
 
           真实内存使用
           <span id="memRealUsed"><?php echo $memRealUsed;?></span>
-		  , 真实内存空闲
+          , 真实内存空闲
           <span id="memRealFree"><?php echo $memRealFree;?></span>
-		  , 使用率
+          , 使用率
           <span id="memRealPercent"><?php echo $memRealPercent;?></span>
           %
             <div class="progress">
@@ -710,12 +716,12 @@ if($sysInfo['swapTotal']>0)
 <?php
 }
 ?>
-	  </td>
-	</tr>
-	  <tr>
-		<td>系统平均负载</td>
-		<td colspan="5" class="w_number"><span id="loadAvg"><?php echo $load;?></span></td>
-	</tr>
+      </td>
+    </tr>
+      <tr>
+        <td>系统平均负载</td>
+        <td colspan="5" class="w_number"><span id="loadAvg"><?php echo $load;?></span></td>
+    </tr>
 </table>
 
 <?php if (false !== ($strs = @file("/proc/net/dev"))) : ?>
@@ -726,9 +732,9 @@ if($sysInfo['swapTotal']>0)
      <tr>
         <td width="13%"><?php echo $info[1][0]?> : </td>
         <td width="29%">入网: <font color='#CC0000'><span id="NetInput<?php echo $i?>"><?php echo $NetInput[$i]?></span></font></td>
-		<td width="14%">实时: <font color='#CC0000'><span id="NetInputSpeed<?php echo $i?>">0B/s</span></font></td>
+        <td width="14%">实时: <font color='#CC0000'><span id="NetInputSpeed<?php echo $i?>">0B/s</span></font></td>
         <td width="29%">出网: <font color='#CC0000'><span id="NetOut<?php echo $i?>"><?php echo $NetOut[$i]?></span></font></td>
-		<td width="14%">实时: <font color='#CC0000'><span id="NetOutSpeed<?php echo $i?>">0B/s</span></font></td>
+        <td width="14%">实时: <font color='#CC0000'><span id="NetOutSpeed<?php echo $i?>">0B/s</span></font></td>
     </tr>
 <?php endfor; ?>
 </table>
