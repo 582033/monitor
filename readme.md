@@ -3,5 +3,9 @@
 * 使用bootstrap样式
 * 用于监控linux环境pc/vps概况
 
+##示例
+
+[yjiang's cake --  资源监控](http://yjiang.tk/other/monitor.php)
+
 ##todo
 * 支持osx
