@@ -618,7 +618,7 @@ function displayData(dataJSON)
 <body>
 <div id="page" class="wall">
     <!-- Github Fork Me -->
-    <a href="https://github.com/582033/monitor"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://dn-yjiang-cdn.qbox.me/forkme.png" alt="Fork me on GitHub" data-canonical-src="http://dn-yjiang-cdn.qbox.me/forkme.png"></a>
+    <a href="https://github.com/582033/monitor"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://dn-yjiang-cdn.qbox.me/forkme.png" alt="Fork me on GitHub" data-canonical-src="https://dn-yjiang-cdn.qbox.me/forkme.png"></a>
     <!-- Github Fork Me -->
 <p>
     <iframe src="https://ghbtns.com/github-btn.html?user=582033&repo=monitor&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
