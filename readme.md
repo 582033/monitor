@@ -5,7 +5,7 @@
 
 ##示例
 
-[yjiang's cake --  资源监控](http://yjiang.tk/other/monitor.php)
+[yjiang's cake --  资源监控](https://yjiang.cn/other/monitor.php)
 
 ##todo
 * 支持osx
