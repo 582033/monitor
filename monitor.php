@@ -519,8 +519,8 @@ if ($_GET['act'] == "rt")
 <title><?php echo $title.$version; ?></title>
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="https://dn-yjiang-cdn.qbox.me/js/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://dn-yjiang-cdn.qbox.me/js/jquery/1.9.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <script type="text/javascript">
 <!--
 $(document).ready(function(){getJSONData();});
